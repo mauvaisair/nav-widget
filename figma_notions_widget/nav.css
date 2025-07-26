@@ -1,0 +1,185 @@
+/* Global Layout */
+html, body {
+  width: 380px;
+  min-height: 200px;
+  max-height: 1900px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 100;
+  color: #000000;
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  gap: 20px;
+}
+
+.popup-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.popup-actions button {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+  font-size: 12px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background: #eee;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.popup-actions button:hover {
+  background: #ddd;
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform;
+  border-radius: 5px;
+  border: none;
+  background: white;
+  box-shadow: 0 0px 11px rgba(0, 0, 0, 0.095); /* clean consistent card shadow */
+  overflow: visible;
+  padding-bottom: 10px;
+  margin-bottom: -10px; /* tight overlap for the “lift” illusion */
+
+}
+
+/* Accordion Buttons */
+.accordion-header {
+  width: 100%;
+  padding: 20px 20px 10px 20px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  background: #fff;
+  border: none;
+  border-radius: 5px 5px 0 0;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  z-index: 1;
+  position: relative;
+}
+
+/* shadow only on content, not header */
+.accordion-content {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding-bottom: 10px;
+}
+
+.accordion-content.open {
+  max-height: 1000px;
+}
+.accordion {
+  padding: 10px;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.095);
+  z-index: 10;
+}
+
+/* Grid inside each section */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px 10px;
+  padding: 30px 20px;
+  text-align: center;
+  animation: expand 0.3s ease;
+}
+
+@keyframes expand {
+  0% {
+    opacity: 0;
+    transform: scaleY(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+/* Link style */
+a {
+  text-decoration: none;
+  color: #000000;
+  transition: transform 0.2s ease;
+}
+
+a:hover {
+  transform: scale(1.05);
+  color: #000000;
+  font-weight: 300;
+}
+
+/* Icons and labels */
+.item img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.label {
+  font-size: 11px;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+
+/* For legacy compatibility */
+:root {
+  width: 400px;
+}
+
+.youtube-search-bar {
+  position: relative;
+  width: calc(100% - 40px);
+  margin: 2px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.youtube-search-bar input {
+  width: 100%;
+  padding: 8px 12px 8px 36px;
+  font-size: 13px;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+  color: #808080;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+  outline: none;
+  background-color: white;
+}
+
+.youtube-search-bar .search-icon {
+  position: absolute;
+  left: 12px;
+  width: 16px;
+  height: 16px;
+  opacity: 1;
+  pointer-events: none;
+}

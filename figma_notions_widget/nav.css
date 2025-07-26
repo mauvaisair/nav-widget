@@ -155,7 +155,7 @@ a:hover {
 .youtube-search-bar {
   position: relative;
   width: calc(100% - 40px);
-  margin: 2px auto 0;
+  margin: 15px auto 0;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,180 +1,142 @@
-/* Global Layout */
-html, body {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  overflow-y: auto;
-  font-family: 'Roboto Mono', monospace;
-  font-weight: 100;
-  color: #000000;
-  background: #f9f9f9;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  padding: 15px 10px 20px;
-  gap: 20px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NAV</title>
+  <link rel="stylesheet" href="nav.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-.popup-actions {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
-  justify-content: center;
-}
+  <div class="accordion">
 
-.popup-actions button {
-  font-family: 'Roboto Mono', monospace;
-  font-weight: 300;
-  font-size: 12px;
-  padding: 6px 12px;
-  border: none;
-  border-radius: 4px;
-  background: #eee;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
+    <!-- Section: Quick Links -->
+     <div class="card" data-id="links">
+        <button class="accordion-header" data-id="links">QUICK LINKS</button>
+        <div class="accordion-content" id="links">
+          <div class="youtube-search-bar">
+            <img src="./icons/magnifyingglass.png" alt="Search" class="search-icon" />
+            <input
+              type="text"
+              id="youtubeSearchInput"
+              placeholder="SEARCH YOUTUBE"
+              autocomplete="off"
+            />
+          </div>
+          <div class="grid">
+            <a class="item" href="https://tattoo.mauvaisair.com" target="_blank">
+              <img src="./icons/mauvaisair.png" alt="Website" />
+              <div class="label">WEBSITE</div>
+            </a>
+            <a class="item" href="https://chatgpt.com/?model=gpt-4o" target="_blank">
+              <img src="./icons/chatgpt.png" alt="ChatGPT" />
+              <div class="label">CHAT GPT</div>
+            </a>
+            <a class="item" href="https://mail.google.com" target="_blank">
+              <img src="./icons/gmail.png" alt="Gmail" />
+              <div class="label">GMAIL</div>
+            </a>
+            <a class="item" href="https://app.tana.inc/?ampDeviceId=7459ee48-628c-490b-9356-d22da95880fe&wsid=JIGn-AGe6gfh" target="_blank">
+              <img src="./icons/tana.png" alt="Tana" />
+              <div class="label">TANA</div>
+            </a>
+            <a class="item" href="https://chatgpt.com/g/g-6818f03d0d708191bd4ec2be4be1dde0-assistant" target="_blank">
+              <img src="./icons/assistant.png" alt="Assistant" />
+              <div class="label">ASSISTANT</div>
+            </a>
+            <a class="item" href="https://business.facebook.com/latest/home?nav_ref=biz_unified_f3_login_page_to_mbs&business_id=578257762509815&asset_id=533917853139092" target="_blank">
+              <img src="./icons/meta.png" alt="Meta" />
+              <div class="label">META</div>
+            </a>
+          </div>
+        </div>
+     </div>
 
-.popup-actions button:hover {
-  background: #ddd;
-}
+    <!-- Section: Website -->
+     <div class="card" data-id="website">
+        <button class="accordion-header" data-id="website">WEBSITE</button>
+        <div class="accordion-content" id="website">
+          <div class="grid">
+            <a class="item" href="https://mauvaisair.squarespace.com/config/pages" target="_blank">
+              <img src="./icons/mauvaisair.png" alt="Pages" />
+              <div class="label">PAGES</div>
+            </a>
+            <a class="item" href="https://mauvaisair.squarespace.com/config/pages/67a3f14592cf05305b2f785c" target="_blank">
+              <img src="./icons/blog.png" alt="Blog" />
+              <div class="label">BLOG</div>
+            </a>
+            <a class="item" href="https://mauvaisair.squarespace.com/config/scheduling" target="_blank">
+              <img src="./icons/sheduling.png" alt="Scheduling" />
+              <div class="label">SCHEDULING</div>
+            </a>
+            <a class="item" href="https://mauvaisair.squarespace.com/config/pages/code-injection" target="_blank">
+              <img src="./icons/code.png" alt="Code" />
+              <div class="label">CODE</div>
+            </a>
+            <a class="item" href="https://mauvaisair.squarespace.com/config/asset-library" target="_blank">
+              <img src="./icons/assets.png" alt="Assets" />
+              <div class="label">ASSETS</div>
+            </a>
+            <a class="item" href="https://account.squarespace.com/domains/managed/mauvaisair.com" target="_blank">
+              <img src="./icons/domain.png" alt="Domain" />
+              <div class="label">DOMAIN</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+    <!-- Section: Google -->
+     <div class="card" data-id="google">
+        <button class="accordion-header" data-id="google">GOOGLE</button>
+        <div class="accordion-content" id="google">
+          <div class="grid">
+            <a class="item" href="https://mail.google.com" target="_blank">
+              <img src="./icons/gmail.png" alt="Gmail" />
+              <div class="label">GMAIL</div>
+            </a>
+            <a class="item" href="https://calendar.google.com" target="_blank">
+              <img src="./icons/google-calendar.png" alt="Calendar" />
+              <div class="label">CALENDAR</div>
+            </a>
+            <a class="item" href="https://youtube.com" target="_blank">
+              <img src="./icons/youtube.png" alt="YouTube" />
+              <div class="label">YOUTUBE</div>
+            </a>
+            <a class="item" href="https://drive.google.com" target="_blank">
+              <img src="./icons/google-drive.png" alt="Drive" />
+              <div class="label">DRIVE</div>
+            </a>
+            <a class="item" href="https://sheets.google.com" target="_blank">
+              <img src="./icons/google-sheets.png" alt="Sheets" />
+              <div class="label">SHEETS</div>
+            </a>
+            <a class="item" href="https://docs.google.com" target="_blank">
+              <img src="./icons/google-docs.png" alt="Docs" />
+              <div class="label">DOCS</div>
+            </a>
+            <a class="item" href="https://www.google.com/maps" target="_blank">
+              <img src="./icons/map.png" alt="Maps" />
+              <div class="label">BUSINESS<br>- MAPS</div>
+            </a>
+            <a class="item" href="https://analytics.google.com" target="_blank">
+              <img src="./icons/google-analytics.png" alt="Analytics" />
+              <div class="label">ANALYTICS</div>
+            </a>
+            <a class="item" href="https://admin.google.com" target="_blank">
+              <img src="./icons/admin-console.png" alt="Admin Console" />
+              <div class="label">ADMIN<br>CONSOLE</div>
+            </a>
+            </a>
+            <a class="item" href="chrome://extensions/" target="_blank">
+              <img src="./icons/puzzlepiece.extension.fill.png" alt="Chrome Extensions" />
+              <div class="label">EXTENSIONS</div>
+            </a>
+          </div>
+        </div>
+        </div> 
+    </div>
 
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  width: 100%;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  will-change: transform;
-  border-radius: 5px;
-  border: none;
-  background: white;
-  box-shadow: 0 0px 11px rgba(0, 0, 0, 0.095);
-  overflow: visible;
-  padding-bottom: 10px;
-  margin-bottom: -10px;
-}
-
-/* Accordion Buttons */
-.accordion-header {
-  width: 100%;
-  padding: 20px 20px 10px 20px;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 14px;
-  font-weight: 300;
-  letter-spacing: 3px;
-  background: #fff;
-  border: none;
-  border-radius: 5px 5px 0 0;
-  text-align: left;
-  cursor: pointer;
-  transition: background 0.2s ease;
-  z-index: 1;
-  position: relative;
-}
-
-/* Accordion Content */
-.accordion-content {
-  width: 100%;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  padding-bottom: 10px;
-}
-
-.accordion-content.open {
-  max-height: 1000px;
-}
-
-.accordion {
-  padding: 10px;
-}
-
-.card:hover {
-  transform: scale(1.01);
-  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.095);
-  z-index: 10;
-}
-
-/* Responsive Grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  gap: 20px;
-  padding: 30px 20px;
-  text-align: center;
-  animation: expand 0.3s ease;
-}
-
-@keyframes expand {
-  0% {
-    opacity: 0;
-    transform: scaleY(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: scaleY(1);
-  }
-}
-
-/* Link style */
-a {
-  text-decoration: none;
-  color: #000000;
-  transition: transform 0.2s ease;
-}
-
-a:hover {
-  transform: scale(1.05);
-  color: #000000;
-  font-weight: 300;
-}
-
-/* Icons and labels */
-.item img {
-  width: 100%;
-  max-width: 32px;
-  height: auto;
-  object-fit: contain;
-  margin-bottom: 8px;
-}
-
-.label {
-  font-size: 11px;
-  letter-spacing: 1px;
-  line-height: 1.3;
-  word-break: break-word;
-}
-
-/* Responsive Input */
-.youtube-search-bar {
-  position: relative;
-  width: 100%;
-  margin: 15px auto 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 10px;
-}
-
-.youtube-search-bar input {
-  width: 100%;
-  padding: 8px 12px 8px 36px;
-  font-size: 13px;
-  font-family: 'Roboto Mono', monospace;
-  font-weight: 300;
-  color: #808080;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
-  outline: none;
-  background-color: white;
-}
-
-.youtube-search-bar .search-icon {
-  position: absolute;
-  left: 22px;
-  width: 16px;
-  height: 16px;
-  opacity: 1;
-  pointer-events: none;
-}
+  <script src="nav.js"></script>
+</body>
+</html>
